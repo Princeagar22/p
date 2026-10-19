@@ -1,0 +1,12 @@
+{
+  "classic": {
+    "id": 13,
+    "confirmed": true,
+    "note": "mt=110 f96.f1 \u2014 verified in capture dumps"
+  },
+  "burst": {
+    "id": 7,
+    "confirmed": true,
+    "note": "re-captured 2026-10-09 22:30:11"
+  }
+}

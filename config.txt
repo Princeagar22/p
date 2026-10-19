@@ -1,0 +1,27 @@
+# ============================================================
+#  AGAR.IO BURST ARENA TOKEN & VIRUS FARM FLEET CONFIGURATION
+# ============================================================
+
+# Region to farm: 'all' (distributes across 6 regions) or 'ap-south-1', 'eu-central-1', 'us-east-1'
+region = all
+
+# Gamemode: 'burst' (Burst Arena) or 'classic'
+gamemode = burst
+
+# Bot Mode: 'solo' (Farms autonomously)
+bot-mode = solo
+solo-strategy = farm
+
+# In-game Bot Name
+bot-name = BURST-FARM
+
+# Number of concurrent bots to run (e.g. 5, 10, 25, 50, 100)
+bot-num = 10
+
+# Proxy usage: 1 = use proxies from proxies.txt, 0 = direct connection
+proxy = 1
+proxy-protocol = socks5
+bots-per-proxy = 1
+
+# Stagger delay between logins (seconds)
+stagger = 0.5

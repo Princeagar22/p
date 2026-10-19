@@ -1770,6 +1770,8 @@ class World:
                 e = parse_entity(v)
                 new[e.id] = e
                 self.entity_history[e.id] = (e.name or '', e.uuid or '', e.mass)
+                if len(self.entity_history) > 120:
+                    self.entity_history = dict(list(self.entity_history.items())[-60:])
         self.entities = new
         self.snapshots += 1
         self.updates += 1
@@ -1791,6 +1793,8 @@ class World:
                 e = parse_entity(v, old)
                 self.entities[e.id] = e
                 self.entity_history[e.id] = (e.name or '', e.uuid or '', e.mass)
+                if len(self.entity_history) > 120:
+                    self.entity_history = dict(list(self.entity_history.items())[-60:])
             elif fn == 4:                      # removed ids
                 self.entities.pop(v, None)
                 if v == self.self_id:

@@ -1,27 +1,26 @@
 # ============================================================
-#  AGAR.IO BURST ARENA TOKEN & VIRUS FARM FLEET CONFIGURATION
+#  AGAR.IO BURST ARENA ULTRA-LOW-RAM FARM FLEET CONFIGURATION
 # ============================================================
 
-# Region to farm: 'all' (distributes across 6 regions) or 'ap-south-1', 'eu-central-1', 'us-east-1'
+# Region distribution: 'all' spreads bots across 6 global regions
 region = all
 
-# Gamemode: 'burst' (Burst Arena) or 'classic'
+# Gamemode: 'burst' (Burst Arena mode for rapid token & XP gains)
 gamemode = burst
 
-# Bot Mode: 'solo' (Farms autonomously)
+# Bot Mode: 'solo' (Pure autonomous solo play, NO party)
 bot-mode = solo
 solo-strategy = farm
 
-# In-game Bot Name
+# In-game Bot Nickname
 bot-name = BURST-FARM
 
-# Number of concurrent bots to run (e.g. 5, 10, 25, 50, 100)
-bot-num = 10
+# Number of bots to run:
+# 'auto' = Automatically runs 1 bot per proxy in proxies.txt!
+# Agar aap 50 proxy daalenge to 50 bot chalenge, 200 proxy daalenge to 200 bot chalenge!
+bot-num = auto
 
-# Proxy usage: 1 = use proxies from proxies.txt, 0 = direct connection
+# Proxy Settings:
 proxy = 1
 proxy-protocol = socks5
 bots-per-proxy = 1
-
-# Stagger delay between logins (seconds)
-stagger = 0.5

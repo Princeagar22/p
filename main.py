@@ -30,6 +30,11 @@ import threading
 import time
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 # --- 1. PRO-GRADE RAM OPTIMIZATION: Thread Stack & GC Tuning ---
 # Default Python thread stack is 8MB (400 threads = 3.2GB -> OOM crash on Railway!).
 # Setting stack size to 256KB reduces memory by 97% (400 threads = ~100MB!).
@@ -202,9 +207,10 @@ def run_single_bot(bot_idx, token, proxy, cfg):
                 strategy="farm",      # Smart Farm strategy
                 no_party=True,        # Pure Solo
                 proxy=proxy if cfg.get("proxy", 1) else None,
-                proto="socks5" if proxy else "auto",
+                proxy_protocol="socks5" if proxy else "auto",
                 enemy_clearance=1,
                 arena_mode=gamemode,
+                game_type=7 if gamemode == "burst" else 13,
             )
 
             def on_stats_cb(st):
@@ -230,7 +236,7 @@ def run_single_bot(bot_idx, token, proxy, cfg):
 
 def main():
     print("=" * 68)
-    print(" 🚀 AGAR.IO BURST ARENA ULTRA-LOW-RAM 24/7 FARM FLEET")
+    print(" [*] AGAR.IO BURST ARENA ULTRA-LOW-RAM 24/7 FARM FLEET")
     print("=" * 68)
 
     port = os.environ.get("PORT")
@@ -290,7 +296,7 @@ def main():
         ACTIVE_BOTS.append(t)
         time.sleep(0.18)
 
-    print(f"\n[✔] All {num_bots} bots successfully dispatched into Burst Arena!")
+    print(f"\n[+] All {num_bots} bots successfully dispatched into Burst Arena!")
 
     def handle_signal(sig, frame):
         print("\n[*] Stopping all bots gracefully...")

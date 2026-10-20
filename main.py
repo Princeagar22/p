@@ -92,6 +92,9 @@ def load_config():
         "bot-name": os.environ.get("BOT_NAME", "BURST-FARM"),
         "bot-num": os.environ.get("BOT_NUM", "auto"),
         "proxy": int(os.environ.get("USE_PROXY", 1)),
+        "boost": int(os.environ.get("BOOST", 1)),
+        "boost-every-play": int(os.environ.get("BOOST_EVERY_PLAY", 1)),
+        "boost-items": os.environ.get("BOOST_ITEMS", "xp_boost_3x_24h,xp_boost_3x_1h"),
     }
     if CONFIG_FILE.exists():
         for line in CONFIG_FILE.read_text(encoding="utf-8", errors="ignore").splitlines():
@@ -194,6 +197,15 @@ def run_single_bot(bot_idx, token, proxy, cfg):
     gamemode = cfg.get("gamemode", "burst").strip().lower()
     nick = cfg.get("bot-name", "BURST-FARM")
 
+    # Boost Configuration: STRICTLY 3x XP Boost (NO mass boost)
+    boost_force = str(cfg.get("boost", "1")).strip().lower() not in ("0", "off", "no", "false", "")
+    raw_boost_items = str(cfg.get("boost-items", "xp_boost_3x_24h,xp_boost_3x_1h")).split(",")
+    boost_items = [
+        item.strip() for item in raw_boost_items
+        if item.strip() and "mass" not in item.lower()
+    ]
+    boost_every_play = str(cfg.get("boost-every-play", "1")).strip().lower() not in ("0", "off", "no", "false", "")
+
     while not STOP_EVENT.is_set():
         bot = None
         try:
@@ -211,7 +223,10 @@ def run_single_bot(bot_idx, token, proxy, cfg):
                 enemy_clearance=1,
                 arena_mode=gamemode,
                 game_type=7 if gamemode == "burst" else 13,
+                boost_force=boost_force,
+                boost_items=boost_items,
             )
+            bot.boost_every_play = boost_every_play
 
             def on_stats_cb(st):
                 BOT_STATS[bot_idx] = st
@@ -273,6 +288,7 @@ def main():
     print(f"    - Scaling Mode           : AUTO (1 Proxy = 1 Dedicated Bot)")
     print(f"    - Total Bots Scheduled   : {num_bots}")
     print(f"    - Gamemode               : BURST ARENA (Solo Level-Up)")
+    print(f"    - Active Boosts          : 3x XP Boost (Strictly NO Mass Boost)")
     print(f"    - Smart Virus Farming    : Safe (+100 Mass) without nearby predators")
     print(f"    - Token Vacuuming        : Active (25x weight)")
     print("=" * 68)

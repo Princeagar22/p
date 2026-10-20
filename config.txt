@@ -24,3 +24,9 @@ bot-num = auto
 proxy = 1
 proxy-protocol = socks5
 bots-per-proxy = 1
+
+# Boost Settings:
+# STRICTLY 3x XP Boost ONLY (Mass boost disabled)
+boost = 1
+boost-every-play = 1
+boost-items = xp_boost_3x_24h,xp_boost_3x_1h

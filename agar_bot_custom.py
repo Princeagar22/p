@@ -1563,6 +1563,11 @@ def parse_entity(buf: bytes, old: Entity | None = None) -> Entity:
     kind = one(fl, 10)
     if kind is not None:
         e.kind = kind
+    elif e.kind is None:
+        if 95.0 <= e.r <= 105.0:
+            e.kind = K_VIRUS
+        elif e.r <= 32.0 and not e.name and not e.uuid:
+            e.kind = K_FOOD
     pos = one(fl, 5)
     if pos is not None:
         p = fields(pos)
@@ -2223,12 +2228,17 @@ class Brain:
             self.target = best.id
             if best.kind == K_SMALL:
                 self.mode = 'EAT_TOKEN'
+                # Tokens: point directly with 90% responsiveness and zero repulsion drift
+                h = (best.x - me.x, best.y - me.y)
+                self.heading = self._blend(self.heading, h, 0.90)
             elif best.kind == K_VIRUS:
                 self.mode = f'EAT_VIRUS (m:{me.mass:.0f})'
+                h = (best.x - me.x, best.y - me.y)
+                self.heading = self._blend(self.heading, h, 0.80)
             else:
                 self.mode = 'EAT_PELLET'
-            h = (best.x - me.x + rep[0] * 1.5, best.y - me.y + rep[1] * 1.5)
-            self.heading = self._blend(self.heading, h, 0.35)
+                h = (best.x - me.x + rep[0] * 1.5, best.y - me.y + rep[1] * 1.5)
+                self.heading = self._blend(self.heading, h, 0.70)
             return self._final_heading(w, me, self.heading, now)
 
         # ---- 4. wander --------------------------------------------------- #
@@ -5570,11 +5580,11 @@ class AgarBot:
     def _send_joy(self, vec, raw: bool = False):
         if self.arena is None:
             return
-        # FOLLOW COME-TO-ME: use WORLD direction, skip HeadingMap.
-        # Measured: +90deg / axis-swap calib made bots walk PAST the operator
-        # ("mere samne se nikal gaye") while thinking they aimed at them.
-        use_raw = (raw or (self.mode == 'follow'
-                           and getattr(self, '_follow_raw_joy', True)))
+        # Pure direct world coordinates for follow, farm, and burst modes (bypasses corrupted HeadingMap)
+        use_raw = (raw or (self.mode == 'follow' and getattr(self, '_follow_raw_joy', True))
+                   or getattr(self, 'strategy', '') == 'farm'
+                   or getattr(self, 'arena_mode', '') == 'burst'
+                   or getattr(self, 'mode', '') == 'play')
         if use_raw:
             v = vec
         else:
@@ -5703,9 +5713,8 @@ class AgarBot:
                 # apart again (that drift is what wedged us in a corner).
                 aim = brain.decide(self.world, now)
                 if aim and (aim[0] != 0.0 or aim[1] != 0.0) and self.world.me:
-                    # Pass through zero-ingress obstacle skirting:
-                    # Guarantees the bot glides safely around enemies while vacuuming token feeds/pellets
-                    aim = self._skirt_enemies(self.world.me, aim[0], aim[1], tgt=None)
+                    if getattr(self, 'mode', '') == 'follow':
+                        aim = self._skirt_enemies(self.world.me, aim[0], aim[1], tgt=None)
 
             ramp = min(1.0, ramp + self.tick * 4.0)
             h = aim if (aim[0] or aim[1]) else brain.heading

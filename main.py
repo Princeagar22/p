@@ -235,7 +235,8 @@ def run_single_bot(bot_idx, token, proxy, cfg):
                 guest_v6=True,
                 strategy="farm",      # Smart Farm strategy
                 no_party=True,        # Pure Solo
-                leave_party=True,     # Cleanly leave any stale party
+                leave_party=False,    # NEVER send mt=80 (keeps bot inside arena forever!)
+                calibrate=False,      # Direct responsive joystick (no 2.3s straight-line probe)
                 proxy=proxy if cfg.get("proxy", 1) else None,
                 proxy_protocol="socks5" if proxy else "auto",
                 enemy_clearance=1,

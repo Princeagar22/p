@@ -165,16 +165,24 @@ def start_health_server(port):
     t.start()
 
 
-# Background RAM Watchdog & GC Sweeper
-def ram_watchdog():
+# Background Fleet & RAM Monitor (Prevents log flooding and Railway rate limits)
+def fleet_monitor():
     while not STOP_EVENT.is_set():
-        time.sleep(45)
+        time.sleep(15)
         gc.collect()
+        alive = len([b for b in ACTIVE_BOTS if b.is_alive()])
         ram_mb = get_current_ram_mb()
-        if ram_mb > 0:
-            alive = len([b for b in ACTIVE_BOTS if b.is_alive()])
-            pct = (ram_mb / 1024.0) * 100.0
-            print(f"[RAM MONITOR] Current RAM: {ram_mb:.1f} MB / 1024 MB ({pct:.1f}%) | Active Bots: {alive}")
+        cur_stats = list(BOT_STATS.values())
+        total_mass = sum(s.get("mass", 0.0) for s in cur_stats)
+        total_ate = sum(s.get("ate", 0) for s in cur_stats)
+        top_mass = max([s.get("mass", 0.0) for s in cur_stats] or [0.0])
+        ram_str = f"{ram_mb:.1f} MB ({(ram_mb / 1024.0 * 100):.1f}%)" if ram_mb > 0 else "N/A"
+        print(
+            f"[FLEET] Bots Active: {alive:>3} | Total Mass: {total_mass:>6.0f} | "
+            f"Top Mass: {top_mass:>5.1f} | Food Eaten: {total_ate:>5} | "
+            f"RAM: {ram_str} | Boost: 3x XP ONLY",
+            flush=True,
+        )
 
 
 ALL_REGIONS = [
@@ -209,6 +217,11 @@ def run_single_bot(bot_idx, token, proxy, cfg):
     while not STOP_EVENT.is_set():
         bot = None
         try:
+            def bot_logger(line):
+                # Clean, non-flooding log: only print boost activations and key joins
+                if any(k in line for k in ("[boost] arming", "[boost] shop", "purchase confirmed", "entering arena")):
+                    print(f"[Bot #{bot_idx+1:>3}] {line}", flush=True)
+
             bot = AgarBot(
                 region=region,
                 nick=nick,
@@ -218,6 +231,7 @@ def run_single_bot(bot_idx, token, proxy, cfg):
                 guest_v6=True,
                 strategy="farm",      # Smart Farm strategy
                 no_party=True,        # Pure Solo
+                leave_party=True,     # Cleanly leave any stale party
                 proxy=proxy if cfg.get("proxy", 1) else None,
                 proxy_protocol="socks5" if proxy else "auto",
                 enemy_clearance=1,
@@ -225,23 +239,17 @@ def run_single_bot(bot_idx, token, proxy, cfg):
                 game_type=7 if gamemode == "burst" else 13,
                 boost_force=boost_force,
                 boost_items=boost_items,
+                verbose=False,        # SILENCE raw packet & roster dumps
+                logger=bot_logger,
             )
             bot.boost_every_play = boost_every_play
 
             def on_stats_cb(st):
                 BOT_STATS[bot_idx] = st
-                # Compact logging every few bots to avoid terminal log flooding
-                if bot_idx == 0 or bot_idx % 10 == 0:
-                    print(
-                        f"[Bot #{bot_idx+1:>3}] Region: {region:<12} | "
-                        f"Mass: {st.get('mass', 0):>5.1f} | Ate: {st.get('ate', 0):>3} | "
-                        f"Score: {st.get('score', 0):>4} | Mode: {st.get('mode', 'FARM')}"
-                    )
 
             bot.on_stats = on_stats_cb
             bot.run()
         except Exception as e:
-            # Short backoff on disconnect
             time.sleep(random.uniform(4.0, 7.0))
         finally:
             if bot is not None:
@@ -293,8 +301,8 @@ def main():
     print(f"    - Token Vacuuming        : Active (25x weight)")
     print("=" * 68)
 
-    # Start background RAM watchdog
-    t_wd = threading.Thread(target=ram_watchdog, daemon=True)
+    # Start background Fleet & RAM Monitor
+    t_wd = threading.Thread(target=fleet_monitor, daemon=True)
     t_wd.start()
 
     # Launch bots staggered to prevent CPU spikes

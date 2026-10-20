@@ -279,17 +279,15 @@ def main():
     raw_proxies = load_lines(PROXIES_FILE)
     proxies = [format_proxy(p) for p in raw_proxies if p.strip()]
 
-    # AUTO-SCALING: 1 bot per proxy (capped at safe 25 bots on Railway to prevent OOM)
+    # AUTO-SCALING: Exactly 1 dedicated bot per proxy in proxies.txt (All proxies run 100%!)
     cfg_bot_num = str(cfg.get("bot-num", "auto")).strip().lower()
     if cfg_bot_num in ("auto", "0", ""):
-        is_cloud = bool(os.environ.get("RAILWAY_ENVIRONMENT") or os.environ.get("PORT"))
-        default_cap = 25 if is_cloud else len(proxies)
-        num_bots = min(len(proxies), default_cap) if proxies else 10
+        num_bots = len(proxies) if proxies else 10
     else:
         try:
             num_bots = int(cfg_bot_num)
         except Exception:
-            num_bots = 25
+            num_bots = len(proxies) if proxies else 10
 
     if not tokens:
         print("[!] Warning: No tokens in token.txt. Running with generated guest sessions.")

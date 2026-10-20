@@ -169,20 +169,24 @@ def start_health_server(port):
 def fleet_monitor():
     while not STOP_EVENT.is_set():
         time.sleep(15)
-        gc.collect()
-        alive = len([b for b in ACTIVE_BOTS if b.is_alive()])
-        ram_mb = get_current_ram_mb()
-        cur_stats = list(BOT_STATS.values())
-        total_mass = sum(s.get("mass", 0.0) for s in cur_stats)
-        total_ate = sum(s.get("ate", 0) for s in cur_stats)
-        top_mass = max([s.get("mass", 0.0) for s in cur_stats] or [0.0])
-        ram_str = f"{ram_mb:.1f} MB ({(ram_mb / 1024.0 * 100):.1f}%)" if ram_mb > 0 else "N/A"
-        print(
-            f"[FLEET] Bots Active: {alive:>3} | Total Mass: {total_mass:>6.0f} | "
-            f"Top Mass: {top_mass:>5.1f} | Food Eaten: {total_ate:>5} | "
-            f"RAM: {ram_str} | Boost: 3x XP ONLY",
-            flush=True,
-        )
+        try:
+            gc.collect()
+            alive = len([b for b in ACTIVE_BOTS if b.is_alive()])
+            ram_mb = get_current_ram_mb()
+            cur_stats = list(BOT_STATS.values())
+            total_mass = sum(s.get("mass", 0.0) for s in cur_stats if isinstance(s, dict))
+            total_ate = sum(s.get("ate", 0) for s in cur_stats if isinstance(s, dict))
+            valid_masses = [s.get("mass", 0.0) for s in cur_stats if isinstance(s, dict)]
+            top_mass = max(valid_masses or [0.0])
+            ram_str = f"{ram_mb:.1f} MB ({(ram_mb / 1024.0 * 100):.1f}%)" if ram_mb > 0 else "N/A"
+            print(
+                f"[FLEET] Bots Active: {alive:>3} | Total Mass: {total_mass:>6.0f} | "
+                f"Top Mass: {top_mass:>5.1f} | Food Eaten: {total_ate:>5} | "
+                f"RAM: {ram_str} | Boost: 3x XP ONLY",
+                flush=True,
+            )
+        except Exception:
+            pass
 
 
 ALL_REGIONS = [
@@ -274,15 +278,17 @@ def main():
     raw_proxies = load_lines(PROXIES_FILE)
     proxies = [format_proxy(p) for p in raw_proxies if p.strip()]
 
-    # AUTO-SCALING: If user adds 200 proxies -> 200 bots start!
+    # AUTO-SCALING: 1 bot per proxy (capped at safe 25 bots on Railway to prevent OOM)
     cfg_bot_num = str(cfg.get("bot-num", "auto")).strip().lower()
     if cfg_bot_num in ("auto", "0", ""):
-        num_bots = len(proxies) if proxies else 10
+        is_cloud = bool(os.environ.get("RAILWAY_ENVIRONMENT") or os.environ.get("PORT"))
+        default_cap = 25 if is_cloud else len(proxies)
+        num_bots = min(len(proxies), default_cap) if proxies else 10
     else:
         try:
             num_bots = int(cfg_bot_num)
         except Exception:
-            num_bots = len(proxies) if proxies else 10
+            num_bots = 25
 
     if not tokens:
         print("[!] Warning: No tokens in token.txt. Running with generated guest sessions.")

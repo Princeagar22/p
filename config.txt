@@ -16,9 +16,8 @@ solo-strategy = farm
 bot-name = BURST-FARM
 
 # Number of bots to run:
-# 'auto' = Automatically runs 1 bot per proxy in proxies.txt!
-# Agar aap 50 proxy daalenge to 50 bot chalenge, 200 proxy daalenge to 200 bot chalenge!
-bot-num = auto
+# Railway / Free cloud tier ke liye 20-30 bots best hain (Zero crash, 24/7 stable).
+bot-num = 25
 
 # Proxy Settings:
 proxy = 1

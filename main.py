@@ -199,7 +199,7 @@ ALL_REGIONS = [
 ]
 
 
-def run_single_bot(bot_idx, token, proxy, cfg):
+def run_single_bot(bot_idx, token, proxy, cfg, all_tokens=None, all_proxies=None):
     target_region = cfg.get("region", "all").strip().lower()
     if target_region == "all":
         region = ALL_REGIONS[bot_idx % len(ALL_REGIONS)]
@@ -218,7 +218,13 @@ def run_single_bot(bot_idx, token, proxy, cfg):
     ]
     boost_every_play = str(cfg.get("boost-every-play", "1")).strip().lower() not in ("0", "off", "no", "false", "")
 
+    round_idx = 0
     while not STOP_EVENT.is_set():
+        # Rotate proxy and token across all 832 proxies and tokens on every session
+        cur_proxy = all_proxies[(bot_idx + round_idx * 400) % len(all_proxies)] if all_proxies else proxy
+        cur_token = all_tokens[(bot_idx + round_idx * 400) % len(all_tokens)] if all_tokens else token
+        round_idx += 1
+
         bot = None
         try:
             def bot_logger(line):
@@ -231,13 +237,13 @@ def run_single_bot(bot_idx, token, proxy, cfg):
                 nick=nick,
                 code=None,            # Pure Solo (No Party)
                 run_s=1000000,
-                token=token,
+                token=cur_token,
                 guest_v6=True,
                 strategy="farm",      # Smart Farm strategy
                 no_party=True,        # Pure Solo
                 leave_party=False,    # NEVER send mt=80 (keeps bot inside arena forever!)
                 calibrate=False,      # Direct responsive joystick (no 2.3s straight-line probe)
-                proxy=proxy if cfg.get("proxy", 1) else None,
+                proxy=cur_proxy if cfg.get("proxy", 1) else None,
                 proxy_protocol="socks5" if proxy else "auto",
                 enemy_clearance=1,
                 arena_mode=gamemode,
@@ -280,14 +286,17 @@ def main():
     proxies = [format_proxy(p) for p in raw_proxies if p.strip()]
 
     # AUTO-SCALING: Exactly 1 dedicated bot per proxy in proxies.txt (All proxies run 100%!)
+    # Cap concurrent threads safely at 400 to stay within Linux container cgroup limits (pids.max ~512)
+    # The 400 active bots continuously cycle through all 832 proxies and tokens round-robin!
+    MAX_CONCURRENT_BOTS = 400
     cfg_bot_num = str(cfg.get("bot-num", "auto")).strip().lower()
     if cfg_bot_num in ("auto", "0", ""):
-        num_bots = len(proxies) if proxies else 10
+        num_bots = min(len(proxies), MAX_CONCURRENT_BOTS) if proxies else 10
     else:
         try:
-            num_bots = int(cfg_bot_num)
+            num_bots = min(int(cfg_bot_num), MAX_CONCURRENT_BOTS)
         except Exception:
-            num_bots = len(proxies) if proxies else 10
+            num_bots = min(len(proxies), MAX_CONCURRENT_BOTS) if proxies else 10
 
     if not tokens:
         print("[!] Warning: No tokens in token.txt. Running with generated guest sessions.")
@@ -295,15 +304,14 @@ def main():
     ram_initial = get_current_ram_mb()
     print(f"[*] Architecture & RAM Settings:")
     print(f"    - Optimized Thread Stack : 256 KB (Default 8MB bypassed -> 97% savings)")
-    print(f"    - Initial Process RAM    : {ram_initial:.1f} MB (Target: < 350 MB for full fleet)")
-    print(f"    - Available Proxies      : {len(proxies)}")
-    print(f"    - Available Tokens       : {len(tokens)}")
-    print(f"    - Scaling Mode           : AUTO (1 Proxy = 1 Dedicated Bot)")
-    print(f"    - Total Bots Scheduled   : {num_bots}")
+    print(f"    - Initial Process RAM    : {ram_initial:.1f} MB (Target: < 700 MB for fleet)")
+    print(f"    - Available Proxies      : {len(proxies)} (All 832 rotated across sessions)")
+    print(f"    - Available Tokens       : {len(tokens)} (Rotated continuously)")
+    print(f"    - Active Concurrent Bots : {num_bots} (Safe within container thread ceiling)")
     print(f"    - Gamemode               : BURST ARENA (Solo Level-Up)")
     print(f"    - Active Boosts          : 3x XP Boost (Strictly NO Mass Boost)")
     print(f"    - Smart Virus Farming    : Safe (+100 Mass) without nearby predators")
-    print(f"    - Token Vacuuming        : Active (25x weight)")
+    print(f"    - Token Vacuuming        : Active (Direct target snapping)")
     print("=" * 68)
 
     # Start background Fleet & RAM Monitor
@@ -317,15 +325,20 @@ def main():
 
         t = threading.Thread(
             target=run_single_bot,
-            args=(i, token, proxy, cfg),
+            args=(i, token, proxy, cfg, tokens, proxies),
             name=f"Bot-{i+1}",
             daemon=True,
         )
-        t.start()
-        ACTIVE_BOTS.append(t)
+        try:
+            t.start()
+            ACTIVE_BOTS.append(t)
+        except RuntimeError as e:
+            print(f"[!] System thread ceiling reached at Bot #{i+1}: {e}")
+            print(f"[*] Fleet stabilized with {len(ACTIVE_BOTS)} active concurrent bots cycling all proxies.")
+            break
         time.sleep(0.18)
 
-    print(f"\n[+] All {num_bots} bots successfully dispatched into Burst Arena!")
+    print(f"\n[+] Fleet running with {len(ACTIVE_BOTS)} active bots continuously farming Burst Arena!")
 
     def handle_signal(sig, frame):
         print("\n[*] Stopping all bots gracefully...")

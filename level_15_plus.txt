@@ -1,8 +1,6 @@
 # ============================================================
 # AGAR.IO LEVEL 15+ ACCOUNTS (TOTAL: 46)
-# Checked Directly on Real Miniclip Servers
 # ============================================================
-
 # [0001] Level: 25 | Coins: 49,140 | DNA: 5,771 | Potions: 273 | Keys: 5210 | Nick: Guest_264732545 | UUID: 632383c9-ea7e-4310-bb3b-74d68e90f9e0
 g2gDYQFtAAAAEH0rH4aQoj2O8+Tet+ndP31tAAAAVQspcvnO+ZZExplN4pUYUiKdHZM/rFHTTkNUek70jPTEn0H1Wn1z7nTvcB8QZW3lo/xj/lEYpM18O3oleNfW+t+lZXwUSLP2oatJQfrAf5iEpp58SFA=
 

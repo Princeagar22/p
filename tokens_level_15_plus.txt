@@ -1,0 +1,142 @@
+# ============================================================
+# AGAR.IO LEVEL 15+ ACCOUNTS (TOTAL: 46)
+# Checked Directly on Real Miniclip Servers
+# ============================================================
+
+# [0001] Level: 25 | Coins: 49,140 | DNA: 5,771 | Potions: 273 | Keys: 5210 | Nick: Guest_264732545 | UUID: 632383c9-ea7e-4310-bb3b-74d68e90f9e0
+g2gDYQFtAAAAEH0rH4aQoj2O8+Tet+ndP31tAAAAVQspcvnO+ZZExplN4pUYUiKdHZM/rFHTTkNUek70jPTEn0H1Wn1z7nTvcB8QZW3lo/xj/lEYpM18O3oleNfW+t+lZXwUSLP2oatJQfrAf5iEpp58SFA=
+
+# [0002] Level: 24 | Coins: 306,530 | DNA: 6,111 | Potions: 743 | Keys: 20 | Nick: Guest_264732583 | UUID: 44b26f95-f47c-4f35-9014-d4d9f78f22eb
+g2gDYQFtAAAAECVhUDffABx3OG1AxLG4rjhtAAAAVYXTvw+vNiwVYF4iZQa87cXV12hjPtcQ92Qu6Eva17f/atyMxeejdnJ/DSy384GnPgH6zDlb2ehGQ13xPpZ5mk52TZkkn4sBNTmwy3Hbc192heXNk8Y=
+
+# [0003] Level: 24 | Coins: 132,360 | DNA: 4,403 | Potions: 579 | Keys: 10 | Nick: Guest_264732552 | UUID: 68f33b05-4f4d-44d3-9547-09dd5caba28e
+g2gDYQFtAAAAEKlI/RNTRGDA6Qi5g8foFx9tAAAAVWHrmyIWgSf5cvbfflsk7zqtniSwxfvYIlGLUBs5+jRm4hmLWWVJv01KMbGlsl3srrD8ErEZ79n7Pz3UBasM0/FPgn4lTxDzirAbAa1htdOaod++194=
+
+# [0004] Level: 23 | Coins: 375,773 | DNA: 4,526 | Potions: 3 | Keys: 130 | Nick: Guest_264732562 | UUID: 83d89d68-18e3-464f-ab87-2ebe6a2e96da
+g2gDYQFtAAAAEA5J81RxL3ZO3JY3hsj3ZhNtAAAAVa7SM88bor7H8Uy+VIntuinWi8T/pm+cy54e0FaITtsTfFLf71Y91wIIEzUNQ0lQT6cDMcdYj2Xg3R0/1uQoq667PFPLzpyX24PXA10SBwE5adc8Xgc=
+
+# [0005] Level: 23 | Coins: 368,930 | DNA: 5,410 | Potions: 585 | Keys: 10 | Nick: Guest_264732556 | UUID: f9d363b3-69a2-4aee-b2c6-2c9df934cfbc
+g2gDYQFtAAAAEBmWa76hDmAdPU6mgMEe8sFtAAAAVcJvPu++f8q2oUg0NRCIfLwDhSriKE80zG3OVNXq9Phxg/m9H8IFpHwtn8GiUHf7+z4zQ2x1DycklmLBHPrrYXqjSAd8kYemdRIkIGOI/1f6cwuSL8g=
+
+# [0006] Level: 23 | Coins: 351,302 | DNA: 4,720 | Potions: 670 | Keys: 50 | Nick: Guest_264732584 | UUID: a8563ca0-6ee0-47f5-bd9a-a02f32c3fd80
+g2gDYQFtAAAAEDvhl9DB3ecvh9/Kjq6/NAVtAAAAVWg3mslV8dYYcXp9qscmXgvntQFB0sQtNgXMWC7UoLV46KUCZu6Zk4L1x1/uADQCaG6Q+SbDx6cTnj3McTxfgWDXLrE2mUrP7LvpEcw7/IPCnypwCDo=
+
+# [0007] Level: 23 | Coins: 299,732 | DNA: 5,139 | Potions: 5 | Keys: 30 | Nick: Guest_264732560 | UUID: 8ddd2acd-f820-413e-aac9-f328238635fc
+g2gDYQFtAAAAEESivUjrRYYxXck7kkhKqfVtAAAAVX6TuZNdBSecYGvLooGvu2GWS4cL4AyiFovVB41PtmJniFbBXXJl1cvRQHg583gWliur/D/Q5lPNtK4m1Hy1QZzDoX7wkE6w3B6N1Afn4kImIVlZ47s=
+
+# [0008] Level: 23 | Coins: 256,750 | DNA: 5,904 | Potions: 168 | Keys: 40 | Nick: Guest_264732600 | UUID: 18ab1d77-940f-46d0-8b50-104ae22c9711
+g2gDYQFtAAAAELGjBuZVPc9qJqovR7kqrtdtAAAAVUFw7MCNow80gmXEnpmYVNVXGpU9Nup8vz7Ucc90nhncd2jrWQxeZEtAWtRLFBUFwSuoond1W+HLSN/ZVE9ucynZAkmxiLc1ZNyII4R83ZBMvQSPVXc=
+
+# [0009] Level: 23 | Coins: 228,680 | DNA: 3,899 | Potions: 965 | Keys: 0 | Nick: Guest_264732602 | UUID: a70359ab-6cbb-48ab-bdca-c82bd1dd72fb
+g2gDYQFtAAAAEFI240Dwlp3VRpedniXpBSltAAAAVWgT16BfL+SIe0Bpw5Ec7ucX47rNHlCH60m1k3POWo3+2pmLqD50+SBnxkaFaNmiRKWXc25IHdXWyum78M+dH7iS18UJa219U+31NRKJJTZQQTbmtkI=
+
+# [0010] Level: 23 | Coins: 220,010 | DNA: 7,697 | Potions: 529 | Keys: 30 | Nick: Guest_264732597 | UUID: e0b0ca9f-54de-47bf-afb3-c0b354dad12a
+g2gDYQFtAAAAEFOESINM1/iu1+nF5B+fJRVtAAAAVagxIGlm7tq4n21iTFiI/D3HeTen7PZvlfoU1gApqC3wjMet+FHqcPa+rI8y50PQMUrHS2ZRC9WalPhUV6jqxu4cuOFLVudoxCkf3bhvg0aOf2iLosw=
+
+# [0011] Level: 23 | Coins: 101,730 | DNA: 5,966 | Potions: 4 | Keys: 30 | Nick: Guest_264732557 | UUID: 01f034ad-4bae-4d58-8515-3c223f81f0dc
+g2gDYQFtAAAAENyTbbbG3b7BZuJI+kfSfDltAAAAVR5vH8S6E2hFxYSVaFHDLdzUnyHIRoUunJmYpfGCKb+cNwtdTVRTKZBXf2h9/MBf8nRhCTZLSqL3FmwxKadOzV4fA5JcnGHEOTvcmaz34eXTIHtl0d0=
+
+# [0012] Level: 22 | Coins: 439,027 | DNA: 6,242 | Potions: 3 | Keys: 740 | Nick: Guest_264732592 | UUID: 30920917-7596-4583-8bf3-63679460ab01
+g2gDYQFtAAAAEOnpyUdd5pk+2NOC/5v9ouxtAAAAVUNcdb7ewvWLAVjENS4Uf46xosIkZX+PZB2cnxN+VxIW0j+N3uj8GpnUsTpTLovNk5a7Sca2TnOnOXLuUS8yS5CD3wZXfFvF3N9tW4jN6Of3QQz4hck=
+
+# [0013] Level: 22 | Coins: 330,210 | DNA: 7,576 | Potions: 371 | Keys: 50 | Nick: Guest_264732586 | UUID: d80b87f6-9dbb-4692-a3bd-9e94b7f31360
+g2gDYQFtAAAAENSo5PtJcUfJU5cwh8acL7htAAAAVVuVe6qfYgQVMGY4g/ctzujyZ3n0dVQCnwTDnQbqW6R/5NQ3r5GfQEblN3/u3oeD+iC5bz++I+jWzai8yJKigpjy5/Nt2akD0+oCUgkEm9T2pVUOsb8=
+
+# [0014] Level: 22 | Coins: 326,837 | DNA: 2,634 | Potions: 3 | Keys: 10 | Nick: Guest_264732596 | UUID: aa041630-34c5-4ebf-b39d-eba7f92a3b0c
+g2gDYQFtAAAAEN5b6Bhm9aElvHl9qrvDNF9tAAAAVeHJfsP3qM0+IQejm5gIBTAy4se7pZHV6JXDiqWbGoDYE0zSH7O8vfBl0NH2Z3r7lxiQvNs90yG3m/E2Qq1BtDFCjZmknc15YRChUhu8go3HUDjdJmM=
+
+# [0015] Level: 22 | Coins: 282,390 | DNA: 5,050 | Potions: 3 | Keys: 10 | Nick: Guest_264732569 | UUID: 7ed15186-6e26-455b-8207-1ced5c5cce00
+g2gDYQFtAAAAEEjxwgFp8nLah95Bf/vlTyxtAAAAVeV0AW5AO7ymX4RwRvo/jBIKAvxpB2TIHECH+svaNKRZG79tvf96R1W/lsokfyZ63Cl1ZTRVKMmMktx4AK4VqK8opmZIeg23q/3ouHozL3R/fqhH614=
+
+# [0016] Level: 22 | Coins: 91,150 | DNA: 2,643 | Potions: 3 | Keys: 40 | Nick: Guest_264732549 | UUID: 58f4dca8-c9d3-400a-a2ae-399774d40b8d
+g2gDYQFtAAAAEIuXUE4uihZaxE09kVSoImltAAAAVbJGDqCx6PKNoe7mSVsO1asGd4YLXOJi1oBwYhPRa0KqJ8hnU1BjNOh1mj2ID2pumaKiyFlwNqBfEHE6Ik2AaHOuxI1WJEDQ4bKvr/CnmdV3L10BtyY=
+
+# [0017] Level: 22 | Coins: 40,170 | DNA: 2,407 | Potions: 3 | Keys: 30 | Nick: Guest_264732548 | UUID: 68fbd97a-d3d6-4c6c-89e7-3621e1425162
+g2gDYQFtAAAAEMjTGsMUFalEFpeo3IitS6FtAAAAVfrClIn4S2FQ4gaLS9viskjYWUk9mj8VJuWhxeG/XTDUbjfeAwUf5RSL51iCUjaWXdiSlGwdB0YbsgnFXOWU2KUOP6poAMgRxjGV+eJKVSTiQthzqRw=
+
+# [0018] Level: 22 | Coins: 5,630 | DNA: 3,185 | Potions: 74 | Keys: 510 | Nick: Guest_264732546 | UUID: d2c8cdbd-1cab-49a2-b493-c0f25990ba74
+g2gDYQFtAAAAENlXS92EWsSblZ/3V8bpYVVtAAAAVQbJqrLYrX0scsXOOAGd5dR17nxMgCPNQTlgPfliPQij98ggjcgWkcCwWY1Y2I4hHwfPqwS2PfNnYTJrWpsOmXOsqp41ES3aZeKH/UGGV6lwLm9aI7s=
+
+# [0019] Level: 21 | Coins: 499,371 | DNA: 6,276 | Potions: 3 | Keys: 50 | Nick: Guest_264732595 | UUID: 44146102-d3a6-41c8-adfe-734dcc695fc1
+g2gDYQFtAAAAEG2PaEi2gFJZ4qiz2bcseultAAAAVdjlJWAPJQTunp6HrrKA5zZ399IEZHcJk/Xw9HrirsMQTlomNguKbhkt3GMa4xw6gOSdbK0yuKpHPNbg5LOGF8q4VfFJ4XSagp7R7sdtGL4MJ/dSmCs=
+
+# [0020] Level: 21 | Coins: 466,806 | DNA: 6,962 | Potions: 3 | Keys: 430 | Nick: Guest_264732563 | UUID: c5f1a6ed-8434-4935-94b7-2305e0c7a70c
+g2gDYQFtAAAAED6QmYKXG+5AcSQF/sJlD35tAAAAVQiEvs12jU+VNqkyuS7LUw0Aw7NYV6KC745L91HXOeMPdI9T5vj/ix0PWWlCefmIBMCLk2rBa9vJg4FhOaxGZ20J8q7g8iHUfWAvQJTCNNlhXiyPYe8=
+
+# [0021] Level: 21 | Coins: 415,970 | DNA: 9,256 | Potions: 1149 | Keys: 30 | Nick: Guest_264732573 | UUID: 41646bd4-db68-49ca-bc3f-fbebd8a8e878
+g2gDYQFtAAAAEHk+lSoIBlknDYpD8OjPF5ttAAAAVT9dhPWDHiuk54hUvAQchVkDKBGrt7ZTKSvdvlJANdHlpuLraQJlkm4UBiNhvebK2mZ5fDxUXj1OUtGD7uwMmmQirlxFHNel703lq1kPuulOmQbHRx0=
+
+# [0022] Level: 21 | Coins: 364,915 | DNA: 3,157 | Potions: 3 | Keys: 880 | Nick: Guest_264732589 | UUID: 38735643-22ac-4380-a41a-fd188c2f2fc5
+g2gDYQFtAAAAECezCKbXAOZN3kyszPICnCNtAAAAVaQLYM5qtkN/Lg/M7h3VAr5QMcq/NeWbRhSSST+8EAJoI3yvgfZMXz7GqKEASgGF8ZLhyy9B0/9tzClF16C3c/5mWalaXb4Xm1jZ5PdVvbV43wakIao=
+
+# [0023] Level: 21 | Coins: 355,074 | DNA: 8,263 | Potions: 284 | Keys: 0 | Nick: Guest_264732555 | UUID: 53b1ceb6-ff0f-4f3e-98fd-a4fc9a256734
+g2gDYQFtAAAAEIszrVUkD/LLdlcuLpXhBiptAAAAVRBUzI/dqj4MJdzPKy9Shou1IzrcANIHskbP6oMOjQuXGYJhu4wO4kk54lvofrkAfeEhBML91pwUoQJ/3xfI+2YhMK4lUptkq4ShehkU5oT30uK+k7s=
+
+# [0024] Level: 21 | Coins: 334,441 | DNA: 8,469 | Potions: 74 | Keys: 12810 | Nick: Guest_264732570 | UUID: 825fe31d-2fa9-49e5-8112-2ce2b9c98d55
+g2gDYQFtAAAAEOrDtyOAmThANeTuEM1E/XptAAAAVZ4ah+U4jCR8ybsvzh5ZjfNGQYIiZkMfJj71D935zB6tCG2iYQ8+Qk2JP0Z5+o0ndikllfGKZ5sXIFNtkpNBaPWjp1XdEOp6WtuQO3GMPAs1wYsnsdU=
+
+# [0025] Level: 21 | Coins: 327,490 | DNA: 14,538 | Potions: 1014 | Keys: 0 | Nick: Guest_264732574 | UUID: 6662a738-c121-4847-96f2-085b3ebf2d43
+g2gDYQFtAAAAEE7VzF3xQoyT4hXXBfTH7qNtAAAAVWdD6Dqap0ZdYRMUfhAVQicvfEG55SDMKYmWCvio3txtxdOBdp82wlkwzlH9M6jWPOIbVSnQkMMswPKRYLadSd/oQYwOoU2NFbFuk4dAelX1sqsa5/Q=
+
+# [0026] Level: 21 | Coins: 305,680 | DNA: 6,404 | Potions: 352 | Keys: 40 | Nick: Guest_264732577 | UUID: e7affeab-56f0-4b98-b473-49e97802046f
+g2gDYQFtAAAAEFxoEDCTLpdIHo7e2hhHUT9tAAAAVZax+J5vJXhQEhuYOCF4l07w++ao1y/lQcdGEoTdFW5xqnohDkYfe6D9KcLo0qrvyjGANLIFHOMIcbMXzaxPD80oOoAHlM8x3JTl5otSMhAwFRy57n8=
+
+# [0027] Level: 21 | Coins: 297,321 | DNA: 5,607 | Potions: 168 | Keys: 50 | Nick: Guest_264732580 | UUID: d315390c-05cd-4401-9ef1-b989ea35dbdd
+g2gDYQFtAAAAEOgjvayy97BXDGl45ZgJwRBtAAAAVTsKrMc9rXJPZcTRKPQGnex+8tEeSX3w1Q5c5MSbRPJYYZylCtTOfmUcFfiAMgtdmQVoJV1kl91fEX4Ptc/mrrFMqRlfiixyZoIUTRVM6Fj9JEKxJXg=
+
+# [0028] Level: 21 | Coins: 266,597 | DNA: 3,967 | Potions: 512 | Keys: 20 | Nick: Guest_264732566 | UUID: 7d411e8d-08df-4561-8295-00b6b58b2d12
+g2gDYQFtAAAAEMuCIIUjSVO0wbQAkkimT9JtAAAAVXbqdKnB8hw0LF4dseBa8bUeBilF2WbejMu08Usk9pudsveLyT31wr2tw3WM61tx3thouahh+xPv1Mf5Xby0OYLH1zBGPvEiltuH7O0oXh6WnkO39ig=
+
+# [0029] Level: 21 | Coins: 256,340 | DNA: 5,940 | Potions: 776 | Keys: 30 | Nick: Guest_264732594 | UUID: aaca137e-7605-4c70-9fd0-665f7853bdf2
+g2gDYQFtAAAAEEBlaz2zJpDrTIuonrt2cxVtAAAAVb+BAM+mNlBL87fXIMmVpB6d0HJzTIIDVryuFuAhwhgz93jwzIyNgKmCP5uSZSn4IFs/stTFOqg3xFXtoF/HedDbOx3sL5zN1Yu/a/eiRZ4aw1BzE20=
+
+# [0030] Level: 21 | Coins: 242,120 | DNA: 7,528 | Potions: 304 | Keys: 10 | Nick: Guest_264732551 | UUID: 05afd5c3-ac99-45ee-aedb-3b373cd1dc0b
+g2gDYQFtAAAAEDxIV/xx/htOdknkzV48bm1tAAAAVT/tbGPtAxPu5gwY/0avwvSSk2CWRfCHkbVheGo1qXRu9UaG41Clih++FkjcfCfWEcAQr+z+2k8nTgpieYEgj/RtSVAOjv+roRjUT8ZktjNapJ2o9Cg=
+
+# [0031] Level: 21 | Coins: 211,330 | DNA: 7,827 | Potions: 554 | Keys: 50 | Nick: Guest_264732553 | UUID: 2b567b25-68f5-4e9a-8395-acefcb3c0584
+g2gDYQFtAAAAEIoJQEMnhe8MIR9NIA/8E0NtAAAAVf/xuqBzLx7ZWsecYHGw2VQ5dc4emWU3V7Gzm8gkR+zao1cwDnsmWgdAErhGdrRaWMZSnvKNDQctRlZ1xiEhJOEBkADp3L/IcjplOzb+78tNGm8NUq4=
+
+# [0032] Level: 21 | Coins: 165,821 | DNA: 6,180 | Potions: 3 | Keys: 40 | Nick: Guest_264732558 | UUID: ae996961-59cb-49ef-90cc-abd62bc10cce
+g2gDYQFtAAAAEI0+UdERSYuECaftEhNCoAFtAAAAVcIuDfdFXqjnLRTQqGJ0j/XAxdUkPqNxHy6KQZkVtji9QYJG/KPvUvMhGwJKmT6A2D/fDi/zXtI/0Ce1/IGg7pawj1LmSq0F4wFzso/vz3EIXG7k29A=
+
+# [0033] Level: 21 | Coins: 113,676 | DNA: 4,769 | Potions: 3 | Keys: 30 | Nick: Guest_264732550 | UUID: 231a9d04-a55d-4f59-95b9-7c3b2c80f486
+g2gDYQFtAAAAEKOJfcxr8pI1elZ8l0aElIptAAAAVffTaPSkRNCTRTgQFz5F1BXUsYy1Sc4YHo0N/pFuFXr2Pm6NHvtcPOLtzX455acvN8r+gE7S7TzUWyW8Rahi0grk6DipIr2iEtUGbw+c9uYLeV/xNtA=
+
+# [0034] Level: 21 | Coins: 109,908 | DNA: 3,800 | Potions: 82 | Keys: 10 | Nick: Guest_264732559 | UUID: 3a7b8703-964d-4f08-ac72-6f3612f6073b
+g2gDYQFtAAAAEJwQUaPKySdyXLSRljS5z7ptAAAAVRULtCLzWJxkla5EX22/2xXkS+czgAB/lL9ScKzJahDOVK/0+p+mQCNBd9oAm35zrfMT6gO/lCBdlqlpH0+Dc69ehNiW4lAg76aw/HKf89ZjPVsp4ac=
+
+# [0035] Level: 20 | Coins: 493,368 | DNA: 8,128 | Potions: 284 | Keys: 2910 | Nick: Guest_264732578 | UUID: 98e89f28-1c2f-4531-8497-99bf3e6cce55
+g2gDYQFtAAAAEE8Q9cJTRBm0N8oP6UUDaVxtAAAAVSkWEKgI7KA7HRPLwVoR7EQ4N9Q0D8PuGdepBfrkFnkBjxE6XIWVQ0I5hGXccg8Tu3BPvmWRAZjOJEgVGUSzvNtfWO+rNw02i2Cwdoygjsoh+c10RfA=
+
+# [0036] Level: 20 | Coins: 435,248 | DNA: 7,047 | Potions: 492 | Keys: 40 | Nick: Guest_264732585 | UUID: 0730a6b7-d0de-4455-9fda-45ae19a63147
+g2gDYQFtAAAAEOajGHGsQGLN3Y3SyHvM4LhtAAAAVQMiCaGlT+Qsabx8c3StQHwuyUBJHDaRpRe82NA4QQKOfDbJadCKbkPOlvDwGZb/vtxtK20iugguD2LVuwms9D7qZeC8vF/utKuokYrn3+iKv2zq4xc=
+
+# [0037] Level: 20 | Coins: 404,820 | DNA: 4,722 | Potions: 562 | Keys: 4660 | Nick: Guest_264732571 | UUID: 8a63d482-2f21-4f61-a2f9-9f6968a7650f
+g2gDYQFtAAAAEOP7MFNykV1vxwbTzoUKvYBtAAAAVT0vFSF7MnwbShX+5CNp6Fzsk3PI8MIPy0DRSrhw1rCe9zg/LB7gf6rmf9TcQmy3ToFntQgubH8wRmBMiOYOomALylq8nA4/cGRcMgENgOXR+YNWXJs=
+
+# [0038] Level: 20 | Coins: 398,705 | DNA: 2,995 | Potions: 4 | Keys: 50 | Nick: Guest_264732564 | UUID: 01dc32a4-85ed-4540-a277-fc9acf6bc5b2
+g2gDYQFtAAAAEOkLikp/gd6Zz0wQut3cIcZtAAAAVd+y2hVwbtChgJwLnEZX97AFl0ZZR6llYNcMZ/CwaJIigrmWsHhf5EP8flK4TZZo80NJCWDc6vDR6zErcPa/JNZeRLWvmHxwSYQgdI6a6m1ZLNt4gR8=
+
+# [0039] Level: 20 | Coins: 385,972 | DNA: 8,624 | Potions: 3 | Keys: 0 | Nick: Guest_264732567 | UUID: 776c1703-9a73-45cd-baac-86d0cae76021
+g2gDYQFtAAAAEG6ihG3LaKStGe3Ag1u6abttAAAAVQbZOt1vQj4A0c//dlZp91yMC3h7lq4myw/qJXVfmDTneYOOhQDITm9Artd1LMQW/0hsh2h8TsBsm3Ib4+CDv7hcJOe7bJXwxfLZ2UAErti+KgaCIAg=
+
+# [0040] Level: 20 | Coins: 376,864 | DNA: 4,419 | Potions: 3 | Keys: 50 | Nick: Guest_264732593 | UUID: 1ed3430b-a0da-4f9c-bda8-6e8c5efdc571
+g2gDYQFtAAAAEIxnpr20actxKbtpuCy0ightAAAAVS9zftJlpwufTlpUCPy/qspTp6CXEFP4rgFdTgLEHqfmHljAB8W2laeIIxdAfiOEpdzbMeG5ifTiSpUpDciVHfJMD7KDiR/ZfOv4yC+zB67Iv6x+aYk=
+
+# [0041] Level: 20 | Coins: 331,925 | DNA: 6,901 | Potions: 3 | Keys: 30 | Nick: Guest_264732572 | UUID: d31bd0a7-c349-4d6e-a20e-d74a29fcd750
+g2gDYQFtAAAAEEdKFe2ZTCnqBFRwD4CedGNtAAAAVSC+ookMzlCVKFWVllQhsCG7Fj9NnlyZeEuK6cx7eBl6xbfeIisqLxFukyDK69dumEAJdohyIKQECTOSg30wuaTXo8r3Nck7lFV9dwY4E/Cqk/k7HEM=
+
+# [0042] Level: 20 | Coins: 328,067 | DNA: 7,294 | Potions: 3 | Keys: 0 | Nick: Guest_264732568 | UUID: 6ae95734-a607-46cb-aede-27c79644e6cf
+g2gDYQFtAAAAEOM+eSfGOozrSLmO+QuGbVdtAAAAVXWBV/h/CeHIS7dfmFbcEfF+fenPvlZTKZwjICk9eGm/ToN8+hBaPwyfYbsyKeKWHZOKIpr9ZCg9Bo9yFxbIZcroa/W1jBmvZf+dv2bt2HQwAACvzSU=
+
+# [0043] Level: 20 | Coins: 315,109 | DNA: 9,590 | Potions: 209 | Keys: 20 | Nick: Guest_264732561 | UUID: 2c682cc9-7cce-457c-895b-4d5d14a398f0
+g2gDYQFtAAAAEA1Z5yeWKKBhpU815kFiTCRtAAAAVVpuY/UpQGWKQdaUV3+m2L1G7bzrijSXbu7SH9Zkc18PpOINGNOUetjM7nyR5nZ05iGuKjicnJngOQtIPTnYD6duQcEXjyMqWgVu4xoXziz4i4FPUBM=
+
+# [0044] Level: 20 | Coins: 280,792 | DNA: 8,489 | Potions: 3 | Keys: 17790 | Nick: Guest_264732587 | UUID: 083d60c1-d28a-4315-9b01-60b5f0eaf94d
+g2gDYQFtAAAAEBtBIRMYfUpHsdiT39P6c0ltAAAAVZsdvo3rOC/LBPfl+BYjHk1+vaaCG4805V7JnhHnWNFD0gJq6wMLO+VeBgK6ocI+a4p8PxpWQL/+ulUoOqyPk2F/8C01aFSPKTzqfTXBUZbbIZbrfdI=
+
+# [0045] Level: 20 | Coins: 263,676 | DNA: 7,093 | Potions: 702 | Keys: 5540 | Nick: Guest_264732576 | UUID: 3128e778-1320-4b2f-906b-94223b209ccf
+g2gDYQFtAAAAEMBwN4fyuJikFF0aBoyCQQ1tAAAAVQKVcI37TFcsQWNTXSsjBdFYCOPRXa/NPbRz+ovFfZv/eLgoIkwsJfN27TFCytkTx/+d9Ha2QIjwAEFs5PR0H1v5aCLnBzd+/FftDLs5Z9s45Q49aqQ=
+
+# [0046] Level: 18 | Coins: 2,220 | DNA: 31 | Potions: 3 | Keys: 40 | Nick: Guest_264732547 | UUID: 691f2cb6-e0e5-4c64-92ca-e99fa5d0c092
+g2gDYQFtAAAAEGekW6Jfdi4tP2b4a1k52XttAAAAVfoipxtr53PckNpUvFZlSzaodoco2gFVVx9bT6fhdNQdqlasuIyXJlHhTY0VSLTW3Cj0tONSoVJRIuw+I8OrKImNEuL5dLiPE0vZS7onuuekzaoGv28=
